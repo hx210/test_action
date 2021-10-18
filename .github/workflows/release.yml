@@ -29,7 +29,7 @@ jobs:
       with:
         name: "R-TOOL"
         allowUpdates: true
-        tag: v0.0.1
+        tag: v0.0.2
         commit: master
         replacesArtifacts: true
         token: ${{ secrets.workflow_token }}  #secrets.GITHUB_TOKEN secrets.workflow_token

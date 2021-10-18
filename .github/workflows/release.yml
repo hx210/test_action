@@ -27,7 +27,7 @@ jobs:
       id: create_release
       uses: ncipollo/release-action@v1 #https://github.com/ncipollo/release-action/tree/main
       with:
-        name: LOL-TOOL
+        name: R-TOOL
         allowUpdates: true
         tag: v0.0.1
         commit: master

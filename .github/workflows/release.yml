@@ -13,7 +13,7 @@ on:
       - '**.py'  
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-20.04
 
     steps:
     - uses: actions/checkout@v2
@@ -27,12 +27,12 @@ jobs:
       id: create_release
       uses: ncipollo/release-action@v1 #https://github.com/ncipollo/release-action/tree/main
       with:
-        name: R-TOOL
+        name: "R-TOOL"
         allowUpdates: true
         tag: v0.0.1
         commit: master
         replacesArtifacts: true
-        token: ${{ secrets.GITHUB_TOKEN }}  #secrets.GITHUB_TOKEN secrets.workflow_token
+        token: ${{ secrets.workflow_token }}  #secrets.GITHUB_TOKEN secrets.workflow_token
         artifacts: "./dist/loltool.md"     
      
 
@@ -48,7 +48,7 @@ jobs:
         id: create_release
         uses: ncipollo/release-action@v1 #https://github.com/ncipollo/release-action/tree/main
         with:
-          name: LOL-TOOL
+          name: "LOL-TOOL"
           allowUpdates: true
           tag: v0.0.1
           commit: master

@@ -33,7 +33,7 @@ jobs:
         commit: master
         replacesArtifacts: true
         token: ${{ secrets.GITHUB_TOKEN }}  #secrets.GITHUB_TOKEN secrets.workflow_token
-        artifacts: ./dist/loltool.md     
+        artifacts: "./dist/loltool.md"     
      
 
   Upload:

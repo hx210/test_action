@@ -27,8 +27,8 @@ jobs:
       uses: softprops/action-gh-release@v1 #https://github.com/softprops/action-gh-release
       with:
         tag_name: v0.0.3
-        files: ./dist/loltool.exe
-        token: ${{ secrets.workflow_token }}
+        files: ./dist/loltool.md
+        token: ${{ secrets.WORKFLOW_TOKEN }}
     
      
 
@@ -46,8 +46,8 @@ jobs:
         with:
           name: "LOL-TOOL"
           allowUpdates: true
-          tag: v0.0.1
+          tag: v0.0.2
           commit: master
           replacesArtifacts: true
-          token: ${{ secrets.workflow_token }}
-          artifacts: ./dist/loltool.exe           
+          token: ${{ secrets.WORKFLOW_TOKEN }}
+          artifacts: ./dist/loltool.md          

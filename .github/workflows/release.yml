@@ -23,16 +23,12 @@ jobs:
        
 
 
-    - name: Create release
-      id: create_release
-      uses: ncipollo/release-action@v1 #https://github.com/ncipollo/release-action/tree/main
+    - name: Upload To Release
+      uses: softprops/action-gh-release@v1 #https://github.com/softprops/action-gh-release
       with:
-        name: "R-TOOL"
-        allowUpdates: true
-        tag: v0.0.2
-        commit: master
-        replacesArtifacts: true
-        token: ${{ secrets.workflow_token }}  #secrets.GITHUB_TOKEN secrets.workflow_token
+        tag_name: v0.0.3
+        files: ./dist/loltool.exe
+        token: ${{ secrets.workflow_token }}
     
      
 

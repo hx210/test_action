@@ -1,0 +1,63 @@
+name: Release Build1
+
+on:
+  workflow_dispatch:
+    inputs:
+      ver:
+        description: "Versions"
+        required: false
+        default: ""
+  
+  push:
+    paths:
+      - '**.py'  
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.8.10'
+       
+    - name: Create release
+      id: create_release
+      uses: ncipollo/release-action@v1 #https://github.com/ncipollo/release-action/tree/main
+      with:
+        name: "LOL-TOOL"
+        allowUpdates: true
+        tag: v0.0.3
+        commit: master
+        replacesArtifacts: true
+        token: ${{ secrets.WORKFLOW_TOKEN }}
+        artifacts: ./dist/loltool.md
+                  
+    - name: Upload To Release
+      uses: softprops/action-gh-release@v1 #https://github.com/softprops/action-gh-release
+      with:
+        tag_name: v0.0.3
+        files: ./dist/loltool.md
+        token: ${{ secrets.WORKFLOW_TOKEN }}
+    
+     
+
+  Upload:
+    needs: [Build]
+    runs-on: ubuntu-20.04
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main    
+
+      - name: Create release
+        id: create_release
+        uses: ncipollo/release-action@v1 #https://github.com/ncipollo/release-action/tree/main
+        with:
+          name: "LOL-TOOL"
+          allowUpdates: true
+          tag: v0.0.2
+          commit: master
+          replacesArtifacts: true
+          token: ${{ secrets.WORKFLOW_TOKEN }}
+          artifacts: ./dist/loltool.md          

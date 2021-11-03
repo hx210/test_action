@@ -25,7 +25,7 @@ jobs:
       id: create_release
       uses: ncipollo/release-action@v1 #https://github.com/ncipollo/release-action/tree/main
       with:
-        name: "LOL-TOOL"
+        name: "LOL-TOOL1"
         allowUpdates: true
         tag: v0.0.3
         commit: main
@@ -33,12 +33,7 @@ jobs:
         token: ${{ secrets.WORKFLOW_TOKEN }}
         artifacts: ./dist/loltool.md
                   
-    - name: Upload To Release
-      uses: softprops/action-gh-release@v1 #https://github.com/softprops/action-gh-release
-      with:
-        tag_name: v0.0.3
-        files: ./dist/loltool.md
-        token: ${{ secrets.WORKFLOW_TOKEN }}
+
     
      
 
@@ -54,10 +49,10 @@ jobs:
         id: create_release
         uses: ncipollo/release-action@v1 #https://github.com/ncipollo/release-action/tree/main
         with:
-          name: "LOL-TOOL"
+          name: "LOL-TOOL2"
           allowUpdates: true
           tag: v0.0.2
-          commit: master
+          commit: main
           replacesArtifacts: true
           token: ${{ secrets.WORKFLOW_TOKEN }}
           artifacts: ./dist/loltool.md          

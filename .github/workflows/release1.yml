@@ -28,7 +28,7 @@ jobs:
         name: "LOL-TOOL"
         allowUpdates: true
         tag: v0.0.3
-        commit: master
+        commit: main
         replacesArtifacts: true
         token: ${{ secrets.WORKFLOW_TOKEN }}
         artifacts: ./dist/loltool.md

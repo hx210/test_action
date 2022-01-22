@@ -1,0 +1,17 @@
+name: Windows
+on: [push, pull_request]
+jobs:
+      
+  Build:
+    runs-on: windows-2022
+    env:
+      MSBUILD_PATH: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\
+    steps:
+    - uses: actions/checkout@v2
+    - name: test1
+      shell: gitbash
+      run: 'ls'
+
+    - name: Build China-Server
+      shell: pwsh
+      run: 'ls'

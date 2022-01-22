@@ -12,4 +12,4 @@ jobs:
 
     - name: Build China-Server
       shell: pwsh
-      run: '"C:\Program Files\Git\bin\bash.exe" ls'
+      run: "C:\Program Files\Git\bin\bash.exe" ls

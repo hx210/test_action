@@ -16,7 +16,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
          github_token: ${{ secrets.GITHUB_TOKEN }}
-         publish_dir: ./dest
+         publish_dir: ./dist
       - uses: actions/checkout@v4
       - uses: ivanvc/abuild-releaser-action@v1.1.0
         with:

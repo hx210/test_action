@@ -12,6 +12,11 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         publish_dir: ./dest
       - uses: actions/checkout@v4
       - uses: ivanvc/abuild-releaser-action@v1.1.0
         with:

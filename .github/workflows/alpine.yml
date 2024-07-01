@@ -12,14 +12,8 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy
-        uses: hx210/actions-gh-pages@main
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-         
       - uses: actions/checkout@v4
-      - uses: ivanvc/abuild-releaser-action@v1.1.0
+      - uses: hx210/abuild-releaser-action@main
         with:
           author: r <r@r.com>
           rsa_public_key: ${{ secrets.RSA_PUBLIC_KEY }}

@@ -26,7 +26,7 @@ jobs:
           replacesArtifacts: true
           tag: t
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: ./community/*
+          artifacts: ./community/x86_64/*
 
       - name: Setup Rclone
         uses: AnimMouse/setup-rclone@v1

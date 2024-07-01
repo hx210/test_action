@@ -13,11 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+        uses: hx210/actions-gh-pages@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          alpine_branch: edge
          
       - uses: actions/checkout@v4
       - uses: ivanvc/abuild-releaser-action@v1.1.0

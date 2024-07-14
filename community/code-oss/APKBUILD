@@ -1,6 +1,6 @@
 # Maintainer: lauren n. liberda <lauren@selfisekai.rocks>
 pkgname=code-oss
-pkgver=1.91.1
+pkgver=1.89.1
 pkgrel=0
 # get this from vscodium
 _productjson=2faafce844f574e1db0a27def376bacad2a15023
@@ -145,7 +145,7 @@ package() {
 }
 
 sha512sums="
-*  code-oss-1.91.1.tar.gz
+*  code-oss-1.89.1.tar.gz
 c46cdcad59d796ea91492ee763897baaf36f7329126d6fd8f6bb782aaefeeba9ddf79c877ab8c22ad1f2194fee5b57b998b81ff994f714d36fc0759da8905ce2  product-2faafce844f574e1db0a27def376bacad2a15023.json
 cca94a1762eec922b6fc4a93301087588455a82ea0e19733cb1067deec1fc64e05d466613860820d680dd8cf16e2aca30bc11afc84a315de1a9c2cb12854cbea  launcher
 9f36c7fa6f0fd6a516f8e22c47f53013337985e59085bf1ea70165d42a513a92aa2a7a99ef0715e752c7190fd39ba703d405838e61bcfb60cabe47c421781eb4  enable-extensions.patch

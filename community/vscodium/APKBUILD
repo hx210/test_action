@@ -38,14 +38,6 @@ export npm_config_build_from_source=true
 
 prepare() {
 	default_prepare
-
-	rm -rf patches/cleanup-archive.patch
-	rm -rf patches/linux/reh-node16.patch
-
-	cp "$srcdir"/electron21.patch.noauto patches/linux/electron21.patch
-	sed -i 's|--max-old-space-size=8192|--max-old-space-size=4096|g' build.sh
-	sed -i 's|--frozen-lockfile|--cache-folder ".." --frozen-lockfile|g' prepare_vscode.sh
-
 }
 
 build() {

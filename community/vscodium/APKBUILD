@@ -26,7 +26,6 @@ options="!check net" # no tests
 subpackages="$pkgname-zsh-completion $pkgname-bash-completion"
 source="https://github.com/VSCodium/vscodium/releases/download/$pkgver/$_realname-$pkgver-src.tar.gz
 	codium
-	electron21.patch.noauto
 	vscodium.desktop
 	"
 builddir="$srcdir/"
@@ -83,6 +82,5 @@ package() {
 sha512sums="
 *  VSCodium-1.91.1.24193-src.tar.gz
 *  codium
-*  electron21.patch.noauto
 *  vscodium.desktop
 "
